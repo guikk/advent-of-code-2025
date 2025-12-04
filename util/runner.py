@@ -17,5 +17,8 @@ class Runner:
         elapsed_time = time.perf_counter() - start_time
         
         print(f"Result: {result}")
-        print(f"Time: {elapsed_time:.6f}s")
+        if elapsed_time > 1:
+          print(f"Time: {elapsed_time:.4f}s")
+        else:
+          print(f"Time: {elapsed_time*1000:.2f}ms")
         print(f"{'='*50}")
