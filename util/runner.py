@@ -19,6 +19,8 @@ class Runner:
         print(f"Result: {result}")
         if elapsed_time > 1:
           print(f"Time: {elapsed_time:.4f}s")
+        elif elapsed_time > 0.001:
+          print(f"Time: {elapsed_time*1000:.0f}ms")
         else:
-          print(f"Time: {elapsed_time*1000:.2f}ms")
+          print(f"Time: {elapsed_time*1000000:.0f}µs")
         print(f"{'='*50}")
